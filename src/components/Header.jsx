@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header data-scroll-sticky className="z-20 w-screen text-md py-4 sm:py-4 md:py-6 lg:py-8 xl:py-88 flex flex-row justify-center items-center md:justify-between md:px-32 absolute top-0">
+    <header data-scroll-sticky className="z-20 w-screen text-md py-4 sm:py-4 md:py-6 lg:py-8 xl:py-88 flex flex-row justify-center items-center md:justify-between md:px-32 top-0 absolute">
         <nav
           className="flex flex-row space-x-4">
             <Link to="main" smooth={true} spy={true} duration={1000}>

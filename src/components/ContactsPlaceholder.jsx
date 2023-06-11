@@ -20,7 +20,10 @@ const ContactsPlaceholder = () => {
         <ul className='text-xl flex flex-row text-center justify-between items-center w-[600px] pt-12 pb-10'>
                 <li className='relative flex flex-col items-center pl-12'>
                     <TbBrandTelegram className='h-[60px] w-[60px]'/>
-                    <p className='hover:underline'>Телеграмм</p>
+                    <motion.a  
+                    href="https://t.me/ayyoshiii"
+                    target="_blank"
+                    className='hover:underline'>Телеграмм</motion.a>
                 </li>
                 <li className='relative flex flex-col items-center'>
                     <SiMaildotru className='h-[55px] w-[55px]'/>
@@ -28,7 +31,9 @@ const ContactsPlaceholder = () => {
                 </li>
                 <li className='relative flex flex-col items-center pr-12'>
                     <FaVk className='h-[60px] w-[60px]'/>
-                    <p className='hover:underline'>ВКонтакте</p>
+                    <motion.a  
+                    href="https://vk.com/kill_the_machines"
+                    target="_blank" className='hover:underline'>ВКонтакте</motion.a>
                 </li>
             </ul>
             {mail ? 

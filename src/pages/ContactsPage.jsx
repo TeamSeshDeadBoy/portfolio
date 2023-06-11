@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import Contacts from "../components/Contacts"
 import ContactsPlaceholder from "../components/ContactsPlaceholder"

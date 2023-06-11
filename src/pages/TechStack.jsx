@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react'
 import FrontStack from '../components/FrontStack.jsx'
 import { motion } from 'framer-motion'
@@ -15,7 +16,6 @@ const TechStack = ({status}) => {
 
   return (
     <div data-scroll-section className="flex flex-col items-center justify-center h-[100vh] w-[100vw] bg-[#252627] text-[#FEFFEA]" id='stack'>
-      {show}
       <motion.h3 
               whileInView={{y: 0, opacity: 1, scale: 1}}
               initial={{y: 100, opacity: 0, scale: 1}}

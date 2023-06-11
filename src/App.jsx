@@ -45,7 +45,7 @@ function App() {
               {loaded == false ? <LoadingScreen  /> : <></>}
               {!loaded ? <div className="min-h-[2000px] w-screen z-10"></div> : <></>}
               <Header/>
-              <MainPage />
+              <MainPage status={temp}/>
               <TechStack status={temp}/>
               <ContactsPage status={temp}/>
               <Toggler setState={getState}/>

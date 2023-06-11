@@ -21,26 +21,30 @@ const Contacts = () => {
     return (
         <div className='relative'>
             <ul className='text-xl flex flex-row text-center justify-between items-center w-[600px]'>
-                <li className='relative'>
+                <li className='relative w-[200px]'>
                     <img src={svgMove} className='fill-[#242526] h-[15px] opacity-10 absolute bottom-16 right-12' />
                     <ThreeWrapper>
                         <Tg3d/>
                     </ThreeWrapper>
-                    <p className='hover:underline -translate-y-10'>Телеграмм</p>
+                    <motion.a href="https://t.me/ayyoshiii" target="_blank">
+                        <p className='hover:underline -translate-y-10'>Телеграмм</p>
+                    </motion.a>
                 </li>
-                <li className='relative'>
+                <li className='relative w-[200px]'>
                     <img src={svgMove} className='fill-[#242526] h-[15px] opacity-10 absolute bottom-16 right-16' />
                     <ThreeWrapper>
                         <Mail3d/>
                     </ThreeWrapper>
                     <button className='hover:underline -translate-y-10' onClick={handleClick}>Почта</button>
                 </li>
-                <li className='relative'>
+                <li className='relative w-[200px]'>
                     <img src={svgMove} className='fill-[#242526] h-[15px] opacity-10 absolute bottom-16 right-12' />
                     <ThreeWrapper>
                         <Vk3d/>
                     </ThreeWrapper>
-                    <p className='hover:underline -translate-y-10'>ВКонтакте</p>
+                    <motion.a  href="https://vk.com/kill_the_machines" target="_blank" >
+                        <p className='hover:underline -translate-y-10'>ВКонтакте</p>
+                    </motion.a>
                 </li>
             </ul>
             {mail ? 
