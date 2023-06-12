@@ -4,10 +4,14 @@ import { OrbitControls, Stats, useGLTF} from '@react-three/drei';
 import {Suspense} from 'react';
 import { Color } from 'three';
 import DecalComp from './DecalComp';
+import { degToRad } from 'three/src/math/MathUtils';
+
 
 const Main = () => {
     const { nodes, materials } = useGLTF('/main.glb')
     const delta = -3
+
+    // mouse move controls
     
     
 
@@ -15,16 +19,18 @@ const Main = () => {
     <>
         <Suspense fallback={null}>
             <Canvas
-                camera={{position: [25, 19, -30], fov: 25, rotation:[0,0,0], translateZ: 5}} shadows
-                className="min-w-[700px]"
+                camera={{position: [27, 15, 25], fov: 25, rotation:[0,0,0], translateZ: 5}} shadows
+                className="min-w-[55%]"
             >
                     <directionalLight intensity={2} position={[15, 25 + delta, -30]} castShadow />
                     {/* <spotLight intensity={0.009} position={[-2,3.5 + delta,0]} castShadow color={new Color(125,255,255)} penumbra={0.5} /> */}
-                    <pointLight intensity={0.005} position={[-2.33,3.5 + delta,0]} castShadow color={new Color(125,255,255)} distance={17}/>
+                    <pointLight intensity={0.004} position={[-2.33,3.5 + delta,0]} castShadow color={new Color(125,255,255)} distance={17}/>
                     <pointLight intensity={0.01} position={[2.2,5 + delta,0]} color={new Color(125,255,255)} distance={3}/>
                     <pointLight intensity={0.01} position={[2.2,4 + delta,0]} color={new Color(125,255,255)} distance={3}/>
                     <ambientLight intensity={0.2} position={[15, 25 + delta, -30]} />
-                    <OrbitControls 
+                    <OrbitControls
+                        minPolarAngle={degToRad(45)}
+                        maxPolarAngle={Math.PI / 2}
                         enableZoom={false}
                     />
                         <group position={[-4,-7 + delta,0]}>
@@ -48,7 +54,7 @@ const Main = () => {
                                 <mesh castShadow geometry={nodes.Cube.geometry} material={materials.Material2} />
                                     <DecalComp />
                             </group>
-                            <mesh castShadow geometry={nodes.Keyboard.geometry} material={materials.Material1} position={[3.076, 7.213, 0]} rotation={[0, 1.571, 0]} scale={1.389} />
+                            <mesh castShadow geometry={nodes.Keyboard.geometry} material={materials.Material1} position={[3.576, 7.213, 0]} rotation={[0, 1.571, 0]} scale={[0.8,1.2,1]} />
                             <mesh receiveShadow geometry={nodes.Table.geometry} material={materials.Material} position={[5.718, 2.456, 6.144]} scale={[0.329, 4.834, 0.329]} />
                             <mesh castShadow geometry={nodes.Mouse.geometry} material={materials.Material1} position={[4.709, 8.216, -3.13]} rotation={[-Math.PI, 1.186, -Math.PI]} scale={0.482} />
                             </group>

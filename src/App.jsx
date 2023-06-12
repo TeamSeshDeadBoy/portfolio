@@ -23,7 +23,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log("setState app.jsx", threed)
     setTemp(threed)
   }, [threed])
   

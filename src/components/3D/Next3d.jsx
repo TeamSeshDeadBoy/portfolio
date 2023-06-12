@@ -5,6 +5,11 @@ import { degToRad } from 'three/src/math/MathUtils';
 
 const Next3d = () => {
     const {nodes, materials} = useGLTF('/next.glb');
+    materials.Material.color.r = 0 
+    materials.Material.color.g = 0 
+    materials.Material.color.b = 0 
+    materials.Material.roughness = 0
+    materials.Material.emissiveIntensity = 0
 
 
   return (

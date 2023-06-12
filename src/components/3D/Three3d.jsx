@@ -5,6 +5,7 @@ import { degToRad } from 'three/src/math/MathUtils';
 
 const Three3d = () => {
     const {nodes, materials} = useGLTF('/three.glb');
+    materials.Material.emissiveIntensity = 0
 
 
   return (

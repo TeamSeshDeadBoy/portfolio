@@ -10,7 +10,6 @@ const Toggler = ({setState}) => {
     }
     
     useEffect(() => {
-        console.log("initialState", on)
         setState(on)
     }, [on])
     
