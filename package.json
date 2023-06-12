@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@n8tb1t/use-scroll-position": "^2.0.3",
     "@react-three/drei": "^9.70.0",
     "@react-three/fiber": "^8.13.0",
     "@react-three/postprocessing": "^2.14.8",
     "framer-motion": "^10.12.16",
-    "gsap": "^3.11.5",
+    "gsap": "^3.12.1",
     "locomotive-scroll": "^4.1.4",
     "maath": "^0.6.0",
     "react": "^18.2.0",
